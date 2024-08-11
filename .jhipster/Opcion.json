@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240802234326"
+  },
+  "applications": ["dispositivos"],
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precioAdicional",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "Opcion",
+  "relationships": [
+    {
+      "otherEntityName": "personalizacion",
+      "otherEntityRelationshipName": "opciones",
+      "relationshipName": "personlaizacion",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

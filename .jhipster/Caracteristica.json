@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240802234126"
+  },
+  "applications": ["dispositivos"],
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Caracteristica",
+  "relationships": [
+    {
+      "otherEntityName": "dispositivo",
+      "otherEntityRelationshipName": "caracteristicas",
+      "relationshipName": "dispositivo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

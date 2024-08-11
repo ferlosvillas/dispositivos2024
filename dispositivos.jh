@@ -1,0 +1,95 @@
+application {
+  config {
+    applicationType monolith
+    authenticationType jwt
+    baseName dispositivos
+    buildTool maven
+    cacheProvider ehcache
+    clientFramework react
+    clientTheme none
+    creationTimestamp 1722641966786
+    databaseType sql
+    devDatabaseType h2Disk
+    enableHibernateCache true
+    enableSwaggerCodegen false
+    enableTranslation true
+    jhipsterVersion "8.6.0"
+    jwtSecretKey "YThlODgxNTUyM2EyZDNlYmMxODhlMGQ5ZjkyMzJmNTRhYmU3ZTJkZmFjNjI3NmEzZjYwOWM0ZWU4OTg5NTg2OTA1MzkyM2ViYTYzNTAwYzk4YzkzMmJlZmQzM2Q0ZjdlMzE3YzkxZjYwN2JiYjIyNDVhMjBjNzhkNGI0MGFhZTQ="
+    languages [es, en, pt-pt]
+    messageBroker false
+    microfrontends []
+    nativeLanguage es
+    packageName ar.edu.um.programacion2.trabajo_final
+    prodDatabaseType mysql
+    reactive false
+    searchEngine false
+    serviceDiscoveryType false
+    testFrameworks []
+    websocket false
+    withAdminUi true
+  }
+
+  entities Dispositivo, Caracteristica, Personalizacion, Opcion, Adicional
+}
+
+/*
+@ChangelogDate("20240811142651")
+entity Prueba {
+  texto String
+  fecha Instant
+  dinero BigDecimal
+  otro LocalDate
+  fecha2 LocalDate
+  fecha3 ZonedDateTime
+  duracion Duration
+  otro2 AnyBlob
+}
+*/
+
+
+entity Dispositivo {
+  codigo String
+  nombre String
+  descripcion String
+  precioBase BigDecimal
+  moneda String
+}
+
+entity Caracteristica {
+  nombre String
+  descripcion String
+}
+
+entity Personalizacion  {
+  nombre String
+  descripcion String
+}
+
+entity Opcion  {
+  codigo String
+  nombre String
+  descripcion String
+  precioAdicional BigDecimal
+}
+
+entity Adicional  {
+  nombre String
+  descripcion String
+  precio BigDecimal
+  precioGratis BigDecimal
+}
+
+relationship OneToMany {
+  Dispositivo{caracteristicas} to Caracteristica{dispositivo}
+  Personalizacion{opciones} to Opcion{personlaizacion}
+}
+
+relationship ManyToMany {
+  Dispositivo{personalizaciones} to Personalizacion{dispositivos}
+  Dispositivo{adicionales} to Adicional{dispositivos}
+}
+
+
+service Dispositivo, Caracteristica, Personalizacion, Opcion, Adicional with serviceImpl
+search Dispositivo, Caracteristica, Personalizacion, Opcion, Adicional with no
+//dto Prueba with mapstruct

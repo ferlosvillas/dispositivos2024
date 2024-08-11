@@ -1,0 +1,27 @@
+{
+  "dispositivosApp": {
+    "personalizacion": {
+      "home": {
+        "title": "Personalizacions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Personalizacion",
+        "createOrEditLabel": "Criar ou editar Personalizacion",
+        "notFound": "Nenhum Personalizacions encontrado"
+      },
+      "created": "Um novo Personalizacion foi criado com o identificador {{ param }}",
+      "updated": "Personalizacion com identificador {{ param }} foi actualizado",
+      "deleted": "Personalizacion com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Personalizacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Personalizacion"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "opciones": "Opciones",
+      "dispositivos": "Dispositivos"
+    }
+  }
+}

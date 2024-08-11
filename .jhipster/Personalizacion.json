@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240802234226"
+  },
+  "applications": ["dispositivos"],
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Personalizacion",
+  "relationships": [
+    {
+      "otherEntityName": "opcion",
+      "otherEntityRelationshipName": "personlaizacion",
+      "relationshipName": "opciones",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "dispositivo",
+      "otherEntityRelationshipName": "personalizaciones",
+      "relationshipName": "dispositivos",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

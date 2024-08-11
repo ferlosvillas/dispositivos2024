@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240802234026"
+  },
+  "applications": ["dispositivos"],
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precioBase",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "moneda",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Dispositivo",
+  "relationships": [
+    {
+      "otherEntityName": "caracteristica",
+      "otherEntityRelationshipName": "dispositivo",
+      "relationshipName": "caracteristicas",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "personalizacion",
+      "otherEntityRelationshipName": "dispositivos",
+      "relationshipName": "personalizaciones",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "adicional",
+      "otherEntityRelationshipName": "dispositivos",
+      "relationshipName": "adicionales",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

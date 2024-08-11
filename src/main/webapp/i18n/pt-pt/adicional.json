@@ -1,0 +1,28 @@
+{
+  "dispositivosApp": {
+    "adicional": {
+      "home": {
+        "title": "Adicionals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Adicional",
+        "createOrEditLabel": "Criar ou editar Adicional",
+        "notFound": "Nenhum Adicionals encontrado"
+      },
+      "created": "Um novo Adicional foi criado com o identificador {{ param }}",
+      "updated": "Adicional com identificador {{ param }} foi actualizado",
+      "deleted": "Adicional com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Adicional {{ id }}?"
+      },
+      "detail": {
+        "title": "Adicional"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "precio": "Precio",
+      "precioGratis": "Precio Gratis",
+      "dispositivos": "Dispositivos"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240802234426"
+  },
+  "applications": ["dispositivos"],
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "precioGratis",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "Adicional",
+  "relationships": [
+    {
+      "otherEntityName": "dispositivo",
+      "otherEntityRelationshipName": "adicionales",
+      "relationshipName": "dispositivos",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

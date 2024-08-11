@@ -1,0 +1,26 @@
+{
+  "dispositivosApp": {
+    "caracteristica": {
+      "home": {
+        "title": "Caracteristicas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Caracteristica",
+        "createOrEditLabel": "Criar ou editar Caracteristica",
+        "notFound": "Nenhum Caracteristicas encontrado"
+      },
+      "created": "Um novo Caracteristica foi criado com o identificador {{ param }}",
+      "updated": "Caracteristica com identificador {{ param }} foi actualizado",
+      "deleted": "Caracteristica com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Caracteristica {{ id }}?"
+      },
+      "detail": {
+        "title": "Caracteristica"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "dispositivo": "Dispositivo"
+    }
+  }
+}

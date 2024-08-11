@@ -1,0 +1,31 @@
+{
+  "dispositivosApp": {
+    "dispositivo": {
+      "home": {
+        "title": "Dispositivos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Dispositivo",
+        "createOrEditLabel": "Criar ou editar Dispositivo",
+        "notFound": "Nenhum Dispositivos encontrado"
+      },
+      "created": "Um novo Dispositivo foi criado com o identificador {{ param }}",
+      "updated": "Dispositivo com identificador {{ param }} foi actualizado",
+      "deleted": "Dispositivo com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Dispositivo {{ id }}?"
+      },
+      "detail": {
+        "title": "Dispositivo"
+      },
+      "id": "ID",
+      "codigo": "Codigo",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "precioBase": "Precio Base",
+      "moneda": "Moneda",
+      "caracteristicas": "Caracteristicas",
+      "personalizaciones": "Personalizaciones",
+      "adicionales": "Adicionales"
+    }
+  }
+}
