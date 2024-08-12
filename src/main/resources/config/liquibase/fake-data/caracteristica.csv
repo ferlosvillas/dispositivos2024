@@ -1,11 +1,8 @@
-id;nombre;descripcion
-1;bottle generously afore;talkative
-2;qua safeguard overjoyed;useful inside if
-3;properly safely;before
-4;aw;spike
-5;next each;ugh for discovery
-6;or;heft fussy duh
-7;vice;starchy cultivator abolishment
-8;ruling intervention;fairly difficult
-9;funny;schematize
-10;positively equally;yippee perm
+id;nombre;descripcion;dispositivo_id
+1;Pantalla;Pantalla OLED 14";1
+2;Camara;Camara Web 720p;1
+3;Batería;Batería 43Wh;1
+4;Pantalla;Pantalla OLED 16";2
+5;Camara;Camara Web 1080p;2
+6;Batería;Batería 80Wh;2
+7;Adicional;Lector de memoria múltiple;2

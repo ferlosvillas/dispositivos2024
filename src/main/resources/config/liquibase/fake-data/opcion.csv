@@ -1,11 +1,10 @@
-id;codigo;nombre;descripcion;precio_adicional
-1;majestically;likewise back patent;fanny-pack following ignorant;16235.7
-2;cultured lens;misty;now rainmaker what;28555.55
-3;of wisely;unimpressively likewise;big hence whoa;16255.94
-4;cc for;how;dice unfortunately;29737.72
-5;slider;rapid grandiose youthfully;despite hence;22833.51
-6;ultimately under;institute;physical soon abnormally;21953.72
-7;adorable itchy;avaricious via;pfft;11739.31
-8;unexpectedly morale husky;vaguely bay afterwards;below around;24866.26
-9;balloonist trivialize since;necessitate whenever opposite;encompass howard;3481.37
-10;uh-huh once repeatedly;modulo wearily queasily;hairy duh bratwurst;18588.85
+id;codigo;nombre;descripcion;precio_adicional;personalizacion_id
+1;PROC01;Core X1;Procesador 1 GHz - 8 Cores;0;1
+2;PROC02;Core X2;Procesador 1.4 GHz - 12 Cores;300.00;1
+3;PROC03;Core Y1;Procesador 1.2 GHz - 10 Cores;0;3
+4;PROC04;Core Y2;Procesador 1.7 GHz - 24 Cores;700.00;3
+5;MEM01;DDR5-8;Memoria DDR5 - 8GB;0;2
+6;MEM02;DDR5-16;Memoria DDR5 - 8GB;350;2
+7;MEM03;DDR4-8;Memoria DDR4 - 8GB;0;4
+8;MEM04;DDR4-16;Memoria DDR4 - 16GB;300;4
+9;MEM05;DDR4-32;Memoria DDR4 - 32GB;900;4

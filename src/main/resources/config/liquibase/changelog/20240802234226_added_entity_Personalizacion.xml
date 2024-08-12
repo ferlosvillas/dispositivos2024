@@ -46,4 +46,16 @@
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>
+
+    <changeSet id="20240802234226-1-data-2" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/personalizacion-dispositivo.csv"
+                  separator=";"
+                  tableName="rel_dispositivo__personalizaciones"
+                  usePreparedStatements="true">
+            <column name="dispositivo_id" type="numeric"/>
+            <column name="personalizaciones_id" type="muneric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
 </databaseChangeLog>

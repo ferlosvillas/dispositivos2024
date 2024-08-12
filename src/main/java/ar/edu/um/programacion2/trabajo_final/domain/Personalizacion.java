@@ -30,12 +30,12 @@ public class Personalizacion implements Serializable {
     @Column(name = "descripcion")
     private String descripcion;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "personlaizacion")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "personlaizacion")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "personlaizacion" }, allowSetters = true)
     private Set<Opcion> opciones = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "personalizaciones")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "personalizaciones")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "caracteristicas", "personalizaciones", "adicionales" }, allowSetters = true)
     private Set<Dispositivo> dispositivos = new HashSet<>();

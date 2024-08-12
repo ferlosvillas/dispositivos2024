@@ -17,8 +17,12 @@ logging:
   level:
     ROOT: DEBUG
     tech.jhipster: DEBUG
-    org.hibernate.SQL: DEBUG
+    org.hibernate.SQL: TRACE
     ar.edu.um.programacion2.trabajo_final: DEBUG
+    liquibase: TRACE
+    liquibase.changelog: TRACE
+    tech.jhipster.config.liquibase: TRACE
+    LiquibaseSchemaResolver: TRACE
 
 spring:
   devtools:

@@ -40,12 +40,12 @@ public class Dispositivo implements Serializable {
     @Column(name = "moneda")
     private String moneda;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "dispositivo")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "dispositivo")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "dispositivo" }, allowSetters = true)
     private Set<Caracteristica> caracteristicas = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "rel_dispositivo__personalizaciones",
         joinColumns = @JoinColumn(name = "dispositivo_id"),
@@ -55,7 +55,7 @@ public class Dispositivo implements Serializable {
     @JsonIgnoreProperties(value = { "opciones", "dispositivos" }, allowSetters = true)
     private Set<Personalizacion> personalizaciones = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "rel_dispositivo__adicionales",
         joinColumns = @JoinColumn(name = "dispositivo_id"),

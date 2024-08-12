@@ -37,7 +37,7 @@ public class Adicional implements Serializable {
     @Column(name = "precio_gratis", precision = 21, scale = 2)
     private BigDecimal precioGratis;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "adicionales")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "adicionales")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "caracteristicas", "personalizaciones", "adicionales" }, allowSetters = true)
     private Set<Dispositivo> dispositivos = new HashSet<>();

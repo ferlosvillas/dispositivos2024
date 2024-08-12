@@ -35,7 +35,7 @@ public class Opcion implements Serializable {
     @Column(name = "precio_adicional", precision = 21, scale = 2)
     private BigDecimal precioAdicional;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnoreProperties(value = { "opciones", "dispositivos" }, allowSetters = true)
     private Personalizacion personlaizacion;
 
