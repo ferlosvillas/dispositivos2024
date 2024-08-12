@@ -59,7 +59,7 @@ export const OpcionUpdate = () => {
     const entity = {
       ...opcionEntity,
       ...values,
-      personlaizacion: personalizacions.find(it => it.id.toString() === values.personlaizacion?.toString()),
+      personalizacion: personalizacions.find(it => it.id.toString() === values.personalizacion?.toString()),
     };
 
     if (isNew) {
@@ -74,7 +74,7 @@ export const OpcionUpdate = () => {
       ? {}
       : {
           ...opcionEntity,
-          personlaizacion: opcionEntity?.personlaizacion?.id,
+          personalizacion: opcionEntity?.personalizacion?.id,
         };
 
   return (
@@ -131,10 +131,10 @@ export const OpcionUpdate = () => {
                 type="text"
               />
               <ValidatedField
-                id="opcion-personlaizacion"
-                name="personlaizacion"
-                data-cy="personlaizacion"
-                label={translate('dispositivosApp.opcion.personlaizacion')}
+                id="opcion-personalizacion"
+                name="personalizacion"
+                data-cy="personalizacion"
+                label={translate('dispositivosApp.opcion.personalizacion')}
                 type="select"
               >
                 <option value="" key="0" />

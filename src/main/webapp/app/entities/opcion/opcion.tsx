@@ -104,7 +104,7 @@ export const Opcion = () => {
                   <FontAwesomeIcon icon={getSortIconByFieldName('precioAdicional')} />
                 </th>
                 <th>
-                  <Translate contentKey="dispositivosApp.opcion.personlaizacion">Personlaizacion</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="dispositivosApp.opcion.personalizacion">Personalizacion</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -122,8 +122,8 @@ export const Opcion = () => {
                   <td>{opcion.descripcion}</td>
                   <td>{opcion.precioAdicional}</td>
                   <td>
-                    {opcion.personlaizacion ? (
-                      <Link to={`/personalizacion/${opcion.personlaizacion.id}`}>{opcion.personlaizacion.id}</Link>
+                    {opcion.personalizacion ? (
+                      <Link to={`/personalizacion/${opcion.personalizacion.id}`}>{opcion.personalizacion.id}</Link>
                     ) : (
                       ''
                     )}

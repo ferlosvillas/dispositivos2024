@@ -17,7 +17,7 @@
   "relationships": [
     {
       "otherEntityName": "opcion",
-      "otherEntityRelationshipName": "personlaizacion",
+      "otherEntityRelationshipName": "personalizacion",
       "relationshipName": "opciones",
       "relationshipSide": "left",
       "relationshipType": "one-to-many"

@@ -10,9 +10,9 @@
     -->
     <changeSet id="20240802234326-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="personlaizacion_id"
+        <addForeignKeyConstraint baseColumnNames="personalizacion_id"
                                  baseTableName="opcion"
-                                 constraintName="fk_opcion__personlaizacion_id"
+                                 constraintName="fk_opcion__personalizacion_id"
                                  referencedColumnNames="id"
                                  referencedTableName="personalizacion"
                                  />

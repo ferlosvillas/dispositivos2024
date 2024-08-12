@@ -30,9 +30,9 @@ public class Personalizacion implements Serializable {
     @Column(name = "descripcion")
     private String descripcion;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "personlaizacion")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "personalizacion")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "personlaizacion" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "personalizacion" }, allowSetters = true)
     private Set<Opcion> opciones = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "personalizaciones")
@@ -87,10 +87,10 @@ public class Personalizacion implements Serializable {
 
     public void setOpciones(Set<Opcion> opcions) {
         if (this.opciones != null) {
-            this.opciones.forEach(i -> i.setPersonlaizacion(null));
+            this.opciones.forEach(i -> i.setPersonalizacion(null));
         }
         if (opcions != null) {
-            opcions.forEach(i -> i.setPersonlaizacion(this));
+            opcions.forEach(i -> i.setPersonalizacion(this));
         }
         this.opciones = opcions;
     }
@@ -102,13 +102,13 @@ public class Personalizacion implements Serializable {
 
     public Personalizacion addOpciones(Opcion opcion) {
         this.opciones.add(opcion);
-        opcion.setPersonlaizacion(this);
+        opcion.setPersonalizacion(this);
         return this;
     }
 
     public Personalizacion removeOpciones(Opcion opcion) {
         this.opciones.remove(opcion);
-        opcion.setPersonlaizacion(null);
+        opcion.setPersonalizacion(null);
         return this;
     }
 

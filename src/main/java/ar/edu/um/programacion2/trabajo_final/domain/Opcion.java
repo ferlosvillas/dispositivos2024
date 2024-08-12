@@ -37,7 +37,7 @@ public class Opcion implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnoreProperties(value = { "opciones", "dispositivos" }, allowSetters = true)
-    private Personalizacion personlaizacion;
+    private Personalizacion personalizacion;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -106,16 +106,16 @@ public class Opcion implements Serializable {
         this.precioAdicional = precioAdicional;
     }
 
-    public Personalizacion getPersonlaizacion() {
-        return this.personlaizacion;
+    public Personalizacion getPersonalizacion() {
+        return this.personalizacion;
     }
 
-    public void setPersonlaizacion(Personalizacion personalizacion) {
-        this.personlaizacion = personalizacion;
+    public void setPersonalizacion(Personalizacion personalizacion) {
+        this.personalizacion = personalizacion;
     }
 
-    public Opcion personlaizacion(Personalizacion personalizacion) {
-        this.setPersonlaizacion(personalizacion);
+    public Opcion personalizacion(Personalizacion personalizacion) {
+        this.setPersonalizacion(personalizacion);
         return this;
     }
 

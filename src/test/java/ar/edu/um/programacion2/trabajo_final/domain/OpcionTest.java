@@ -24,14 +24,14 @@ class OpcionTest {
     }
 
     @Test
-    void personlaizacionTest() {
+    void personalizacionTest() {
         Opcion opcion = getOpcionRandomSampleGenerator();
         Personalizacion personalizacionBack = getPersonalizacionRandomSampleGenerator();
 
-        opcion.setPersonlaizacion(personalizacionBack);
-        assertThat(opcion.getPersonlaizacion()).isEqualTo(personalizacionBack);
+        opcion.setPersonalizacion(personalizacionBack);
+        assertThat(opcion.getPersonalizacion()).isEqualTo(personalizacionBack);
 
-        opcion.personlaizacion(null);
-        assertThat(opcion.getPersonlaizacion()).isNull();
+        opcion.personalizacion(null);
+        assertThat(opcion.getPersonalizacion()).isNull();
     }
 }

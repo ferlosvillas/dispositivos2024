@@ -329,7 +329,7 @@ class DispositivoResourceIT {
         Dispositivo partialUpdatedDispositivo = new Dispositivo();
         partialUpdatedDispositivo.setId(dispositivo.getId());
 
-        partialUpdatedDispositivo.descripcion(UPDATED_DESCRIPCION).precioBase(UPDATED_PRECIO_BASE).moneda(UPDATED_MONEDA);
+        partialUpdatedDispositivo.descripcion(UPDATED_DESCRIPCION).precioBase(UPDATED_PRECIO_BASE);
 
         restDispositivoMockMvc
             .perform(

@@ -33,19 +33,19 @@ class PersonalizacionTest {
 
         personalizacion.addOpciones(opcionBack);
         assertThat(personalizacion.getOpciones()).containsOnly(opcionBack);
-        assertThat(opcionBack.getPersonlaizacion()).isEqualTo(personalizacion);
+        assertThat(opcionBack.getPersonalizacion()).isEqualTo(personalizacion);
 
         personalizacion.removeOpciones(opcionBack);
         assertThat(personalizacion.getOpciones()).doesNotContain(opcionBack);
-        assertThat(opcionBack.getPersonlaizacion()).isNull();
+        assertThat(opcionBack.getPersonalizacion()).isNull();
 
         personalizacion.opciones(new HashSet<>(Set.of(opcionBack)));
         assertThat(personalizacion.getOpciones()).containsOnly(opcionBack);
-        assertThat(opcionBack.getPersonlaizacion()).isEqualTo(personalizacion);
+        assertThat(opcionBack.getPersonalizacion()).isEqualTo(personalizacion);
 
         personalizacion.setOpciones(new HashSet<>());
         assertThat(personalizacion.getOpciones()).doesNotContain(opcionBack);
-        assertThat(opcionBack.getPersonlaizacion()).isNull();
+        assertThat(opcionBack.getPersonalizacion()).isNull();
     }
 
     @Test

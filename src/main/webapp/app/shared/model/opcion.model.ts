@@ -6,7 +6,7 @@ export interface IOpcion {
   nombre?: string | null;
   descripcion?: string | null;
   precioAdicional?: number | null;
-  personlaizacion?: IPersonalizacion | null;
+  personalizacion?: IPersonalizacion | null;
 }
 
 export const defaultValue: Readonly<IOpcion> = {};

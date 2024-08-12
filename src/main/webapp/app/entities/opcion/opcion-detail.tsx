@@ -56,9 +56,9 @@ export const OpcionDetail = () => {
           </dt>
           <dd>{opcionEntity.precioAdicional}</dd>
           <dt>
-            <Translate contentKey="dispositivosApp.opcion.personlaizacion">Personlaizacion</Translate>
+            <Translate contentKey="dispositivosApp.opcion.personalizacion">Personalizacion</Translate>
           </dt>
-          <dd>{opcionEntity.personlaizacion ? opcionEntity.personlaizacion.id : ''}</dd>
+          <dd>{opcionEntity.personalizacion ? opcionEntity.personalizacion.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/opcion" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}
