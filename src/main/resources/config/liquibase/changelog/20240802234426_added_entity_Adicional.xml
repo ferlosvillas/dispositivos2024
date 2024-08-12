@@ -58,10 +58,10 @@
         <loadData
                   file="config/liquibase/fake-data/adicional-dispositivo.csv"
                   separator=";"
-                  tableName="dispositivo_personalizacion"
+                  tableName="rel_dispositivo__adicionales"
                   usePreparedStatements="true">
             <column name="dispositivo_id" type="numeric"/>
-            <column name="adicional_id" type="muneric"/>
+            <column name="adicionales_id" type="muneric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>
