@@ -139,7 +139,8 @@ public class DispositivoResource {
         @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
     ) {
         log.debug("REST request to get all Dispositivos");
-        return dispositivoService.findAll();
+        List<Dispositivo> result = dispositivoService.findAll();
+        return result;
     }
 
     /**

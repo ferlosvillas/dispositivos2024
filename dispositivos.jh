@@ -81,7 +81,7 @@ entity Adicional  {
 
 relationship OneToMany {
   Dispositivo{caracteristicas} to Caracteristica{dispositivo}
-  Personalizacion{opciones} to Opcion{personlaizacion}
+  Personalizacion{opciones} to Opcion{personalizacion}
 }
 
 relationship ManyToMany {

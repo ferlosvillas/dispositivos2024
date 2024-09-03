@@ -52,7 +52,8 @@ public class Dispositivo implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "personalizaciones_id")
     )
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "opciones", "dispositivos" }, allowSetters = true)
+    //@JsonIgnoreProperties(value = { "opciones", "dispositivos" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "dispositivos" }, allowSetters = true)
     private Set<Personalizacion> personalizaciones = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)

@@ -4,7 +4,11 @@ id;codigo;nombre;descripcion;precio_adicional;personalizacion_id
 3;PROC03;Core Y1;Procesador 1.2 GHz - 10 Cores;0;3
 4;PROC04;Core Y2;Procesador 1.7 GHz - 24 Cores;700.00;3
 5;MEM01;DDR5-8;Memoria DDR5 - 8GB;0;2
-6;MEM02;DDR5-16;Memoria DDR5 - 8GB;350;2
+6;MEM02;DDR5-16;Memoria DDR5 - 16GB;350;2
 7;MEM03;DDR4-8;Memoria DDR4 - 8GB;0;4
 8;MEM04;DDR4-16;Memoria DDR4 - 16GB;300;4
 9;MEM05;DDR4-32;Memoria DDR4 - 32GB;900;4
+10;VID01;Integrado;Video Integrado Memoria Compartida;0;5
+11;VID02;Aceleradora 3D;Radeon HD-XYZ 8GB;500;5
+12;VID01;Integrado;Video Integrado Memoria Compartida;0;6
+13;VID02;Aceleradora 3D;Nvidia XYZ-200 12GB;900;6
