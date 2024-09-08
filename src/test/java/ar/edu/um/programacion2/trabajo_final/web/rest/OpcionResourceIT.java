@@ -285,7 +285,7 @@ class OpcionResourceIT {
         Opcion partialUpdatedOpcion = new Opcion();
         partialUpdatedOpcion.setId(opcion.getId());
 
-        partialUpdatedOpcion.nombre(UPDATED_NOMBRE).descripcion(UPDATED_DESCRIPCION).precioAdicional(UPDATED_PRECIO_ADICIONAL);
+        partialUpdatedOpcion.codigo(UPDATED_CODIGO).descripcion(UPDATED_DESCRIPCION).precioAdicional(UPDATED_PRECIO_ADICIONAL);
 
         restOpcionMockMvc
             .perform(

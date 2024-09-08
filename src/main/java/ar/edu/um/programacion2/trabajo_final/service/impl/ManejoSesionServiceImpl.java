@@ -1,3 +1,5 @@
 package ar.edu.um.programacion2.trabajo_final.service.impl;
 
-public class ManejoSesionServiceImpl {}
+import ar.edu.um.programacion2.trabajo_final.service.ManejoSesionService;
+
+public class ManejoSesionServiceImpl implements ManejoSesionService {}

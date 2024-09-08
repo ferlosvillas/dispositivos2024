@@ -1,0 +1,27 @@
+{
+  "dispositivosApp": {
+    "grupo": {
+      "home": {
+        "title": "Grupos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Grupo",
+        "createOrEditLabel": "Criar ou editar Grupo",
+        "notFound": "Nenhum Grupos encontrado"
+      },
+      "created": "Um novo Grupo foi criado com o identificador {{ param }}",
+      "updated": "Grupo com identificador {{ param }} foi actualizado",
+      "deleted": "Grupo com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Grupo {{ id }}?"
+      },
+      "detail": {
+        "title": "Grupo"
+      },
+      "id": "ID",
+      "idGrupo": "Id Grupo",
+      "nombres": "Nombres",
+      "descripcion": "Descripcion",
+      "user": "User"
+    }
+  }
+}

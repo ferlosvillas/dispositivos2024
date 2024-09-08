@@ -61,6 +61,8 @@ public class CacheConfiguration {
             createCache(cm, ar.edu.um.programacion2.trabajo_final.domain.Opcion.class.getName());
             createCache(cm, ar.edu.um.programacion2.trabajo_final.domain.Adicional.class.getName());
             createCache(cm, ar.edu.um.programacion2.trabajo_final.domain.Adicional.class.getName() + ".dispositivos");
+            createCache(cm, ar.edu.um.programacion2.trabajo_final.domain.Grupo.class.getName());
+            createCache(cm, ar.edu.um.programacion2.trabajo_final.domain.Venta.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

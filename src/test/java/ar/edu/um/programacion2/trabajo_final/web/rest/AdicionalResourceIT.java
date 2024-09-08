@@ -283,7 +283,7 @@ class AdicionalResourceIT {
         Adicional partialUpdatedAdicional = new Adicional();
         partialUpdatedAdicional.setId(adicional.getId());
 
-        partialUpdatedAdicional.descripcion(UPDATED_DESCRIPCION);
+        partialUpdatedAdicional.nombre(UPDATED_NOMBRE).precio(UPDATED_PRECIO);
 
         restAdicionalMockMvc
             .perform(

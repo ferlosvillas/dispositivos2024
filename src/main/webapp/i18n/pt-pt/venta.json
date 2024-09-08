@@ -1,0 +1,31 @@
+{
+  "dispositivosApp": {
+    "venta": {
+      "home": {
+        "title": "Ventas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Venta",
+        "createOrEditLabel": "Criar ou editar Venta",
+        "notFound": "Nenhum Ventas encontrado"
+      },
+      "created": "Um novo Venta foi criado com o identificador {{ param }}",
+      "updated": "Venta com identificador {{ param }} foi actualizado",
+      "deleted": "Venta com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Venta {{ id }}?"
+      },
+      "detail": {
+        "title": "Venta"
+      },
+      "id": "ID",
+      "idVenta": "Id Venta",
+      "codigo": "Codigo",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "precio": "Precio",
+      "ventaPedidoJson": "Venta Pedido Json",
+      "ventaResultadoJson": "Venta Resultado Json",
+      "grupo": "Grupo"
+    }
+  }
+}

@@ -12,7 +12,9 @@
         "caracteristica": "Caracteristica",
         "personalizacion": "Personalizacion",
         "opcion": "Opcion",
-        "adicional": "Adicional"
+        "adicional": "Adicional",
+        "grupo": "Grupo",
+        "venta": "Venta"
       },
       "account": {
         "main": "Account",

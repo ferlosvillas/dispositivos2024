@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20240903120338"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "idGrupo",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "nombres",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Grupo",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "grupo",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

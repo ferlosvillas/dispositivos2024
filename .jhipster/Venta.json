@@ -1,0 +1,53 @@
+{
+  "annotations": {
+    "changelogDate": "20240908142129"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "idVenta",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "ventaPedidoJson",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "ventaResultadoJson",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Venta",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "nombres",
+      "otherEntityName": "grupo",
+      "relationshipName": "grupo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -265,8 +265,6 @@ class CaracteristicaResourceIT {
         Caracteristica partialUpdatedCaracteristica = new Caracteristica();
         partialUpdatedCaracteristica.setId(caracteristica.getId());
 
-        partialUpdatedCaracteristica.descripcion(UPDATED_DESCRIPCION);
-
         restCaracteristicaMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, partialUpdatedCaracteristica.getId())

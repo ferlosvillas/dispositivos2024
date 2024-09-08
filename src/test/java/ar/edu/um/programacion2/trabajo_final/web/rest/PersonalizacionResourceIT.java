@@ -265,7 +265,7 @@ class PersonalizacionResourceIT {
         Personalizacion partialUpdatedPersonalizacion = new Personalizacion();
         partialUpdatedPersonalizacion.setId(personalizacion.getId());
 
-        partialUpdatedPersonalizacion.nombre(UPDATED_NOMBRE).descripcion(UPDATED_DESCRIPCION);
+        partialUpdatedPersonalizacion.descripcion(UPDATED_DESCRIPCION);
 
         restPersonalizacionMockMvc
             .perform(

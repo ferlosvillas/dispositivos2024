@@ -8,6 +8,8 @@ import Caracteristica from './caracteristica';
 import Personalizacion from './personalizacion';
 import Opcion from './opcion';
 import Adicional from './adicional';
+import Grupo from './grupo';
+import Venta from './venta';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -20,6 +22,8 @@ export default () => {
         <Route path="personalizacion/*" element={<Personalizacion />} />
         <Route path="opcion/*" element={<Opcion />} />
         <Route path="adicional/*" element={<Adicional />} />
+        <Route path="grupo/*" element={<Grupo />} />
+        <Route path="venta/*" element={<Venta />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>
