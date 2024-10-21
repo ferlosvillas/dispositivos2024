@@ -1,8 +1,9 @@
 id;nombre;descripcion;dispositivo_id
-1;Pantalla;Pantalla OLED 14";1
-2;Camara;Camara Web 720p;1
+1;Pantalla;15.6” FHD Display;1
+2;Camara;720p Camera w/Privacy Shutter;1
 3;Batería;Batería 43Wh;1
-4;Pantalla;Pantalla OLED 16";2
-5;Camara;Camara Web 1080p;2
+
+4;Pantalla;18" 240Hz QHD+";2
+5;Camara;WebCam 1080p;2
 6;Batería;Batería 80Wh;2
-7;Adicional;Lector de memoria múltiple;2
+7;Adicional;SD Card Reader;2
