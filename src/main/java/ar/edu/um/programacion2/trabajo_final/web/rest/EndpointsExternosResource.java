@@ -5,6 +5,7 @@ import ar.edu.um.programacion2.trabajo_final.domain.DTO.VentaListaOutDTO;
 import ar.edu.um.programacion2.trabajo_final.domain.DTO.VentaOutDTO;
 import ar.edu.um.programacion2.trabajo_final.domain.Dispositivo;
 import ar.edu.um.programacion2.trabajo_final.domain.Venta;
+import ar.edu.um.programacion2.trabajo_final.service.CambioValoresService;
 import ar.edu.um.programacion2.trabajo_final.service.DispositivoService;
 import ar.edu.um.programacion2.trabajo_final.service.ManejadorVentaService;
 import ar.edu.um.programacion2.trabajo_final.web.rest.errors.BadRequestAlertException;
@@ -26,9 +27,16 @@ public class EndpointsExternosResource {
 
     private final ManejadorVentaService manejadorVentaService;
 
-    public EndpointsExternosResource(DispositivoService dispositivoService, ManejadorVentaService manejadorVentaService) {
+    private final CambioValoresService cambioValoresService;
+
+    public EndpointsExternosResource(
+        DispositivoService dispositivoService,
+        ManejadorVentaService manejadorVentaService,
+        CambioValoresService cambioValoresService
+    ) {
         this.dispositivoService = dispositivoService;
         this.manejadorVentaService = manejadorVentaService;
+        this.cambioValoresService = cambioValoresService;
     }
 
     // Get dispositivos
@@ -36,14 +44,14 @@ public class EndpointsExternosResource {
     public List<Dispositivo> getAllDispositivos(
         @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
     ) {
-        log.debug("REST request to get all Dispositivos");
+        log.info("REST request to get all Dispositivos");
         List<Dispositivo> result = dispositivoService.findAll();
         return result;
     }
 
     @PostMapping("/vender")
     public ResponseEntity<VentaOutDTO> crearVenta(@RequestBody CrearVentaDTO crearVentaDTO, Principal principal) throws URISyntaxException {
-        log.debug("REST request to crear Venta : {}", crearVentaDTO);
+        log.info("REST request to crear Venta : {}", crearVentaDTO);
         Venta venta = this.manejadorVentaService.guardarVenta(crearVentaDTO, principal);
         if (venta == null) {
             throw new BadRequestAlertException("Datos invalidos", null, "");
@@ -58,13 +66,29 @@ public class EndpointsExternosResource {
 
     @GetMapping("/ventas")
     public ResponseEntity<List<VentaListaOutDTO>> listarVentas(Principal principal) {
+        log.info("Listar ventas de " + principal.getName().toString());
         List<VentaListaOutDTO> ventas = this.manejadorVentaService.getVentasPorGrupo(principal);
         return ResponseEntity.ok(ventas);
     }
 
     @GetMapping("/venta/{id}")
     public ResponseEntity<VentaOutDTO> getVenta(@PathVariable Long id, Principal principal) {
+        log.info("Listar venta id: " + id.toString());
         VentaOutDTO venta = this.manejadorVentaService.getVentaOutById(principal, id);
         return ResponseEntity.ok(venta);
+    }
+
+    @GetMapping("/cambio_d1")
+    public void cambioD1() {
+        log.info("Endpoint de cambio de valor de dispositivo");
+        this.cambioValoresService.cambiarPrecioDispositivo();
+        this.cambioValoresService.verCambios();
+    }
+
+    @GetMapping("/cambio_d2")
+    public void cambioD2() {
+        log.info("Endpoint de cambio de valor de adicional");
+        this.cambioValoresService.cambiarPrecioAdicional();
+        this.cambioValoresService.verCambios();
     }
 }
