@@ -124,6 +124,23 @@ public class ManejadorVentaServiceImpl implements ManejadorVentaService {
         ventaOutDTO.setAdicionales(adicionales);
         List<PersonalizacionOutDTO> personalizaciones = new ArrayList<>();
         for (PersonalizacionDTO personalizacion : ventaDTO.getPersonalizaciones()) {
+            Optional<Opcion> opcionO = this.opcionService.findOne(personalizacion.getId());
+            if (opcionO.isPresent()) {
+                PersonalizacionOutDTO personalizacionOutDTO = new PersonalizacionOutDTO();
+                Opcion opcionDB = opcionO.get();
+                personalizacionOutDTO.setId(opcionDB.getPersonalizacion().getId());
+                personalizacionOutDTO.setNombre(opcionDB.getPersonalizacion().getNombre());
+                personalizacionOutDTO.setDescripcion(opcionDB.getPersonalizacion().getDescripcion());
+                OpcionOutDTO opcionOutDTO = new OpcionOutDTO();
+                opcionOutDTO.setId(opcionDB.getId());
+                opcionOutDTO.setCodigo(opcionDB.getCodigo());
+                opcionOutDTO.setNombre(opcionDB.getNombre());
+                opcionOutDTO.setPrecioAdicional(personalizacion.getPrecio());
+                opcionOutDTO.setDescripcion(opcionDB.getDescripcion());
+                personalizacionOutDTO.setOpcion(opcionOutDTO);
+                personalizaciones.add(personalizacionOutDTO);
+            }
+            /*
             Optional<Personalizacion> personalizacionO = this.personalizacionService.findOne(personalizacion.getId());
             PersonalizacionOutDTO personalizacionOutDTO = new PersonalizacionOutDTO();
             if (personalizacionO.isPresent()) {
@@ -143,7 +160,7 @@ public class ManejadorVentaServiceImpl implements ManejadorVentaService {
                 opcionOutDTO.setPrecioAdicional(personalizacion.getPrecio());
                 personalizacionOutDTO.setOpcion(opcionOutDTO);
             }
-            personalizaciones.add(personalizacionOutDTO);
+            personalizaciones.add(personalizacionOutDTO);*/
         }
         ventaOutDTO.setPersonalizaciones(personalizaciones);
 

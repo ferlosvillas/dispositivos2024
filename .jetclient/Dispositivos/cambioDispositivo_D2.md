@@ -1,9 +1,9 @@
 ```toml
-name = 'cambioDispositivo'
+name = 'cambioDispositivo_D2'
 method = 'GET'
-url = '{{baseUrl}}/api/catedra/cambio_d1'
-sortWeight = 6000000
-id = 'c62ebadf-0f3e-4791-8c6d-2e84a7c94d1a'
+url = '{{baseUrl}}/api/catedra/cambio_d2'
+sortWeight = 7000000
+id = '62cd6cd2-72fd-4ba6-89cd-3e0ec1076b4e'
 
 [[headers]]
 key = 'Content-Type'
