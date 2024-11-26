@@ -18,7 +18,7 @@ public class VentaOutDTO {
     protected String descripcion;
     protected BigDecimal precioBase;
     protected String moneda;
-    protected List<CaracteristicaOutDTO> catacteristicas;
+    protected List<CaracteristicaOutDTO> caracteristicas;
     protected List<PersonalizacionOutDTO> personalizaciones;
     protected List<AdicionalOutDTO> adicionales;
 }

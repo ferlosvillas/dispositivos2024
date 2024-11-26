@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -172,7 +171,7 @@ public class ManejadorVentaServiceImpl implements ManejadorVentaService {
             caracteristicaOutDTO.setDescripcion(caracteristica.getDescripcion());
             caracteristicas.add(caracteristicaOutDTO);
         }
-        ventaOutDTO.setCatacteristicas(caracteristicas);
+        ventaOutDTO.setCaracteristicas(caracteristicas);
         return ventaOutDTO;
     }
 
