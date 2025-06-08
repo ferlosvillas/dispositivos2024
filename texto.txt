@@ -1,1 +1,104 @@
+import random
 
+nivel = 1
+victorias = 0
+vidas = 3
+monedas = 0
+binoculares = 0
+saltos = 0  # Nuevo objeto: cantidad de saltos disponibles
+
+print("¡Bienvenido al juego de los pozos misteriosos con tienda y objetos especiales! 🛒")
+
+print("Puedes comprar vidas por 100 monedas, binoculares por 150 monedas y salto de nivel por 300 monedas (desbloqueado en nivel 5).")
+
+while True:
+    # Verificar si el jugador tiene 0 vidas
+    if vidas == 0:
+        print("\n💀 Te quedaste sin vidas.")
+        if monedas >= 100:
+            print(f"Tienes {monedas} monedas.")
+            opcion = input("¿Quieres comprar una vida por 100 monedas? (sí / no): ")
+            if opcion.lower() == "sí":
+                monedas -= 100
+                vidas = 1
+                print("❤️ Compraste una vida. ¡Sigue jugando!")
+            else:
+                break
+        else:
+            print("No tienes suficientes monedas para comprar una vida.")
+            break
+
+    print(f"\n--- Nivel {nivel} ---")
+    cantidad_de_pozos = nivel + 1
+    pozo_seguro = random.randint(1, cantidad_de_pozos)
+
+    print(f"Hay {cantidad_de_pozos} pozos. Solo uno tiene piso.")
+    opciones_extra = []
+    if binoculares > 0:
+        opciones_extra.append("'usar binoculares'")
+    if saltos > 0:
+        opciones_extra.append("'usar salto'")
+    if opciones_extra:
+        print(f"Tienes disponibles: {', '.join(opciones_extra)}.")
+
+    eleccion = input(f"¿Cuál pozo eliges? (1 a {cantidad_de_pozos}): ")
+
+    # Usar binoculares
+    if eleccion.lower() == "usar binoculares" and binoculares > 0:
+        print(f"👁️‍🗨️ Usaste los binoculares... el pozo seguro es el número {pozo_seguro}.")
+        binoculares -= 1
+        eleccion = input("Ahora elige el pozo correcto: ")
+
+    # Usar salto de nivel
+    if eleccion.lower() == "usar salto" and saltos > 0:
+        print("🦘 Usaste salto de nivel. ¡Saltas este nivel sin riesgo!")
+        saltos -= 1
+        victorias += 1
+        monedas_ganadas = nivel * 10
+        monedas += monedas_ganadas
+        print(f"💰 Ganaste {monedas_ganadas} monedas. Total: {monedas}")
+        nivel += 1
+        # Ofrecer tienda después de usar salto
+        if monedas >= 100:
+            print("\n🛍️ Bienvenido a la tienda:")
+            print("1. Comprar vida (100 monedas)")
+            print("2. Comprar binoculares (150 monedas)")
+            if nivel >= 5:
+                print("3. Comprar salto de nivel (300 monedas)")
+                print("4. No comprar nada")
+            else:
+                print("3. No comprar nada")
+            opcion_tienda = input("¿Qué deseas comprar? ")
+
+            if opcion_tienda == "1" and monedas >= 100:
+                vidas += 1
+                monedas -= 100
+                print("❤️ Compraste una vida. Total de vidas:", vidas)
+            elif opcion_tienda == "2" and monedas >= 150:
+                binoculares += 1
+                monedas -= 150
+                print("🔭 Compraste binoculares. Ahora tienes:", binoculares)
+            elif opcion_tienda == "3" and nivel >= 5 and monedas >= 300:
+                saltos += 1
+                monedas -= 300
+                print("🦘 Compraste salto de nivel. Ahora tienes:", saltos)
+            elif opcion_tienda in ["3", "4"] or opcion_tienda == "3" and nivel < 5:
+                print("🚪 Saliste de la tienda.")
+            else:
+                print("❌ No tienes suficientes monedas o opción inválida.")
+        continue  # Salto usado, saltar a siguiente nivel
+
+    # Elegir pozo normalmente
+    if eleccion == str(pozo_seguro):
+        print("✅ ¡Sobreviviste! Subes de nivel.")
+        victorias += 1
+        monedas_ganadas = nivel * 10
+        monedas += monedas_ganadas
+        print(f"💰 Ganaste {monedas_ganadas} monedas. Total: {monedas}")
+        nivel += 1
+
+        # Ofrecer la tienda después de ganar el nivel
+        if monedas >= 100:
+            print("\n🛍️ Bienvenido a la tienda:")
+            print("1. Comprar vida (100 monedas)")
+            print("2. Comprar binoculares (150 monedas)")
